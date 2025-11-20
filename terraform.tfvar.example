@@ -1,0 +1,28 @@
+# Example Terraform variables file for Multi-Region AWS SSM Project
+# Copy this file to terraform.tfvars and update with your actual values
+# DO NOT commit terraform.tfvars to version control
+
+# Project configuration
+project_name = "efs-terraform-project    # Descriptive name for your project
+environment = "development"              # Environment: dev, staging, prod
+
+# Network configuration (different CIDR blocks for each region)
+cidr_block = "192.168.0.0/16"       # VPC CIDR block
+
+# US-West-2 (Oregon) subnets
+subnet_az_a = "192.168.10.0/24"     # First subnet in us-west-2a
+subnet_az_b = "192.168.20.0/24"     # Second subnet in us-west-2b
+
+# EC2 configuration (region-specific AMIs required)
+ami_id = "ami-054b7fc3c333ac6d2"    # Amazon Linux 2023 AMI ID for us-west-2
+instance_type = "t3.micro"          # EC2 instance type
+
+# Notes:
+# - Update ami_id with the latest Amazon Linux 2023 AMI for us-west-2
+# - Choose instance_type based on your workload requirements
+# - Place one instance in both us-west-2a and us-west-2b to show instance's sharing efs
+# - Use SSM to securely access your ec2 instances
+
+# Example AMI IDs (update with current ones):
+# us-west-2: ami-054b7fc3c333ac6d2 (Amazon Linux 2023)
+
