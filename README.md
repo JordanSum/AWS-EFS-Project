@@ -1,6 +1,13 @@
 # AWS EFS Project with Terraform
 
-A production-ready Terraform project that deploys a multi-AZ AWS infrastructure with Elastic File System (EFS) shared storage across EC2 instances. This setup demonstrates how to create a highly available, scalable file storage solution accessible from multiple compute instances.
+A development-ready Terraform project that deploys a multi-AZ AWS infrastructure with Elastic File System (EFS) shared storage across EC2 instances. This setup demonstrates how to create a highly available, scalable file storage solution accessible from multiple compute instances.
+
+> [!WARNING]  
+> This is a development project and should NOT be used for production. Please use best policy and security when deploying this project
+
+ - This is a development project and should NOT be used for production.
+
+ - Please use best policy and security when deploying this project
 
 ## Architecture Overview
 
